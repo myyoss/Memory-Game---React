@@ -1,0 +1,74 @@
+.App {
+  max-width: 60%;
+  margin: 40px auto;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #c23866;
+  color: white;
+}
+h1 {
+  color: aliceblue;
+}
+
+.card-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.card {
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+}
+
+.card img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in-out 0.2s;
+  position: absolute;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+
+}
+
+.card .back {
+  transition: all ease-in-out 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.stopFlip{
+  pointer-events: none
+}
+
+/* div {
+  border: 1px solid red;
+} */

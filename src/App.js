@@ -49,6 +49,8 @@ function App() {
     if (choiceOne && choiceTwo) {
       setStopInter(true);
       if (choiceOne.src === choiceTwo.src) {
+        var audio = new Audio("/sounds/bling.mp3");
+        audio.play();
         console.log("ITS A MATCH!");
 
         choiceOne.matched = true;
@@ -60,6 +62,8 @@ function App() {
         }
       } else {
         console.log("ITS NOT A MATCH!");
+        var audio = new Audio("/sounds/harp.mp3");
+        audio.play();
       }
       setClickCount(clickCount + 1);
 
@@ -70,7 +74,7 @@ function App() {
         setStopInter(false);
       }, 1500);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceOne, choiceTwo]);
 
   useEffect(() => {

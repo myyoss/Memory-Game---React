@@ -69,6 +69,11 @@ h1 {
   pointer-events: none
 }
 
+.clickCount,.matchCount{
+  padding-top: 4px;
+  font-size: 14px;
+}
+
 /* div {
   border: 1px solid red;
 } */

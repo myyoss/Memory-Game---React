@@ -80,7 +80,7 @@ function App() {
   console.log(cards, turns);
   return (
     <div className="App">
-      <h1>Magic Match</h1>
+      <h1>Matches!</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className="clickCount">Tries: {clickCount}</div>
       <div className="matchCount">Matches: {matchCount}</div>

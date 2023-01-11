@@ -3,12 +3,12 @@ import "./App.css";
 import SingleCard from "./components/SingleCard";
 
 const cardImages = [
-  { src: "/img/Video.svg", matched: false },
-  { src: "/img/Trash.svg", matched: false },
-  { src: "/img/Target.svg", matched: false },
-  { src: "/img/Rocket.svg", matched: false },
-  { src: "/img/Bulb.svg", matched: false },
-  { src: "/img/Chess.svg", matched: false },
+  { src: "/img/Video.png", matched: false },
+  { src: "/img/Trash.png", matched: false },
+  { src: "/img/Target.png", matched: false },
+  { src: "/img/Rocket.png", matched: false },
+  { src: "/img/Bulb.png", matched: false },
+  { src: "/img/Chess.png", matched: false },
 ];
 
 function App() {

@@ -19,6 +19,7 @@ function App() {
   const [clickCount, setClickCount] = useState(0);
   const [matchCount, setMatchCount] = useState(0);
   const [stopInter, setStopInter] = useState(false);
+  const [changeBackground, setChangeBackground] = useState("App");
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -30,6 +31,7 @@ function App() {
     setMatchCount(0);
     setChoiceOne(null);
     setChoiceTwo(null);
+    setChangeBackground("App");
   };
 
   const handleClick = (card) => {
@@ -49,7 +51,7 @@ function App() {
     if (choiceOne && choiceTwo) {
       setStopInter(true);
       if (choiceOne.src === choiceTwo.src) {
-        var audio = new Audio("/sounds/bling.mp3");
+        const audio = new Audio("/sounds/bling.mp3");
         audio.play();
         console.log("ITS A MATCH!");
 
@@ -57,12 +59,9 @@ function App() {
         choiceTwo.matched = true;
 
         setMatchCount(matchCount + 1);
-        if (matchCount === 6) {
-          setMatchCount(0);
-        }
       } else {
         console.log("ITS NOT A MATCH!");
-        var audio = new Audio("/sounds/harp.mp3");
+        const audio = new Audio("/sounds/harp.mp3");
         audio.play();
       }
       setClickCount(clickCount + 1);
@@ -72,7 +71,7 @@ function App() {
         setChoiceTwo(null);
         setTurns(0);
         setStopInter(false);
-      }, 1500);
+      }, 1000);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceOne, choiceTwo]);
@@ -81,9 +80,16 @@ function App() {
     shuffleCards();
   }, []);
 
+  useEffect(() => {
+    if (matchCount === 6) {
+      setChangeBackground("appWin");
+      const audio = new Audio("/sounds/win.mp3");
+      audio.play();
+    }
+  }, [matchCount]);
   console.log(cards, turns);
   return (
-    <div className="App">
+    <div className={changeBackground}>
       <h1>Matches!</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className="clickCount">Tries: {clickCount}</div>

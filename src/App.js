@@ -9,8 +9,8 @@ const cardImages = [
   { src: "/img/Rocket.png", matched: false },
   { src: "/img/Bulb.png", matched: false },
   { src: "/img/chess.png", matched: false },
-    { src: "/img/Chips.png", matched: false },
-  { src: "/img/Cap.png", matched: false },
+  { src: "/img/Crown.png", matched: false },
+  { src: "/img/Headphone.png", matched: false },
 ];
 
 function App() {

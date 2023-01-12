@@ -1,5 +1,6 @@
 .App {
   max-width: 60%;
+  height: 100%;
   margin: 40px auto;
 }
 
@@ -45,8 +46,8 @@ h1 {
 }
 
 .card img {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   display: block;
   border: 2px solid white;
   border-radius: 6px;

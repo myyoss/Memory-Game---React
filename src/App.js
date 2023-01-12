@@ -9,6 +9,8 @@ const cardImages = [
   { src: "/img/Rocket.png", matched: false },
   { src: "/img/Bulb.png", matched: false },
   { src: "/img/chess.png", matched: false },
+    { src: "/img/Chips.png", matched: false },
+  { src: "/img/Cap.png", matched: false },
 ];
 
 function App() {
@@ -81,7 +83,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (matchCount === 6) {
+    if (matchCount === 8) {
       setChangeBackground("appWin");
       const audio = new Audio("/sounds/win.mp3");
       audio.play();

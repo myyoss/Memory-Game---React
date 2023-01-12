@@ -5,4 +5,4 @@ Play Live:
 
 https://memory-game-y4w3.onrender.com/
 
-![Screenshot](https://user-images.githubusercontent.com/93940739/212086174-881ea83f-af0e-4805-8c88-5d624b04d9ce.png)
+![Screenshot](https://user-images.githubusercontent.com/93940739/212162879-9572da29-188b-45ab-bc50-b4de5a080978.png)

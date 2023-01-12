@@ -8,7 +8,7 @@ const cardImages = [
   { src: "/img/Target.png", matched: false },
   { src: "/img/Rocket.png", matched: false },
   { src: "/img/Bulb.png", matched: false },
-  { src: "/img/Chess.png", matched: false },
+  { src: "/img/chess.png", matched: false },
 ];
 
 function App() {
@@ -94,7 +94,6 @@ function App() {
       <button onClick={shuffleCards}>New Game</button>
       <div className="clickCount">Tries: {clickCount}</div>
       <div className="matchCount">Matches: {matchCount}</div>
-
       <div className="card-grid">
         {cards &&
           cards.map((card) => (

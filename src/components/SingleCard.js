@@ -4,12 +4,12 @@ const SingleCard = ({ card, handleClick, flipped }) => {
   return (
     <div className="card">
       <div className={flipped ? "flipped" : ""}>
-        <img className="front" src={card.src} alt="" />
+        <img className="front" src={card.src} alt={card.src} />
         <img
           className="back"
           src="/img/background.svg"
-          onClick={() => (handleClick(card))}
-          alt=""
+          onClick={() => handleClick(card)}
+          alt="background"
         />
       </div>
     </div>

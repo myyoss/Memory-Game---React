@@ -11,6 +11,8 @@ const cardImages = [
   { src: "/img/chess.png", matched: false },
   { src: "/img/Crown.png", matched: false },
   { src: "/img/Headphone.png", matched: false },
+  { src: "/img/Locker.png", matched: false },
+  { src: "/img/Fire.png", matched: false },
 ];
 
 function App() {
@@ -22,9 +24,16 @@ function App() {
   const [matchCount, setMatchCount] = useState(0);
   const [stopInter, setStopInter] = useState(false);
   const [changeBackground, setChangeBackground] = useState("App");
+  const [chooseCardsNumber, setChooseCardsNumber] = useState(6);
+
+  const gameDifficulty = (x) => {
+    setChooseCardsNumber(x);
+    shuffleCards();
+  };
 
   const shuffleCards = () => {
-    const shuffledCards = [...cardImages, ...cardImages]
+    const cardsNumber = cardImages.slice(0, chooseCardsNumber);
+    const shuffledCards = [...cardsNumber, ...cardsNumber]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
     setCards(shuffledCards);
@@ -80,20 +89,27 @@ function App() {
 
   useEffect(() => {
     shuffleCards();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chooseCardsNumber]);
 
   useEffect(() => {
-    if (matchCount === 8) {
+    console.log("chooseCardsNumber", chooseCardsNumber);
+    if (matchCount === chooseCardsNumber) {
       setChangeBackground("appWin");
       const audio = new Audio("/sounds/win.mp3");
       audio.play();
     }
-  }, [matchCount]);
+  }, [matchCount, chooseCardsNumber]);
+
   console.log(cards, turns);
   return (
     <div className={changeBackground}>
       <h1>Matches!</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <div className="gamelevel">
+        <button onClick={() => gameDifficulty(6)}>Beginners</button>
+        <button onClick={() => gameDifficulty(8)}>Medium</button>
+        <button onClick={() => gameDifficulty(10)}>Expert</button>
+      </div>
       <div className="clickCount">Tries: {clickCount}</div>
       <div className="matchCount">Matches: {matchCount}</div>
       <div className="card-grid">

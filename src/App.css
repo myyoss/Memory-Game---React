@@ -12,24 +12,37 @@
   background-position: center;
 }
 
+
 button {
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.484);
   padding: 6px 12px;
   border-radius: 4px;
   color: white;
-  font-weight: bold;
+  font-weight: 100;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.7em;
+  width: 8rem;
 }
 
 button:hover {
   background-color: #c23866;
   color: white;
 }
+
 h1 {
   color: aliceblue;
+  margin-bottom: 1rem;
 }
+
+.gamelevel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 
 .card-grid {
   margin-top: 3rem;
@@ -46,8 +59,8 @@ h1 {
 }
 
 .card img {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   display: block;
   border: 2px solid white;
   border-radius: 6px;
@@ -95,6 +108,14 @@ h1 {
   body {
     background-color: #d780a4;
   }
+  .App {
+    max-width: 70%;
+    margin: 10px auto;
+  }
+  .appWin {
+    max-width: 70%;
+    margin: 10px auto;
+  }
 }
 @media only screen and (max-width: 770px) {
   .App {
@@ -137,9 +158,9 @@ h1 {
   }
 }
 
-/* div {
-  border: 1px solid red;
-} */
+div {
+  /* border: 1px solid red; */
+}
 
 .area {
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);

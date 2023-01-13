@@ -1,9 +1,9 @@
 Mathes! Memory Game
 
-- React Html Css
-- Choose your skill level
-- Count your tries
-- Sound FX
+- React Html Css ✍️
+- Choose your skill level 💪
+- Count your tries 👮
+- Sound FX 🧛🏻
 
 Play Live:
 https://memory-game-y4w3.onrender.com/

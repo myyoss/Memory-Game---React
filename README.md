@@ -1,5 +1,12 @@
-# Memory-Game---React
-Memory Game - React:)
+Mathes! Memory Game
+
+React Html Css
+
+Choose your skill level
+
+Count your tries
+
+Sound FX
 
 Play Live:
 

@@ -151,6 +151,20 @@ h1 {
     max-width: 90%;
     margin: 10px auto;
   }
+  .gameCounts{
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 2rem;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  button{
+    padding: 4px 6px;
+    font-weight: 100;
+    font-size: 0.5em;
+    width: 6rem;
+  }
   .card img {
     width: 60px;
     height: 60px;

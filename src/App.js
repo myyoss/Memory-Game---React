@@ -110,8 +110,10 @@ function App() {
         <button onClick={() => gameDifficulty(8)}>Medium</button>
         <button onClick={() => gameDifficulty(10)}>Expert</button>
       </div>
-      <div className="clickCount">Tries: {clickCount}</div>
-      <div className="matchCount">Matches: {matchCount}</div>
+      <div className="gameCounts">
+        <div className="clickCount">Tries: {clickCount}</div>
+        <div className="matchCount">Match: {matchCount}</div>
+      </div>
       <div className="card-grid">
         {cards &&
           cards.map((card) => (

@@ -24,7 +24,7 @@ function App() {
   const [matchCount, setMatchCount] = useState(0);
   const [stopInter, setStopInter] = useState(false);
   const [changeBackground, setChangeBackground] = useState("App");
-  const [chooseCardsNumber, setChooseCardsNumber] = useState(6);
+  const [chooseCardsNumber, setChooseCardsNumber] = useState(8);
 
   const gameDifficulty = (x) => {
     setChooseCardsNumber(x);

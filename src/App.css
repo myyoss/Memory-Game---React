@@ -61,7 +61,6 @@ h1 {
 }
 
 .card {
-  display: block;
   position: relative;
   margin: auto;
   cursor: pointer;

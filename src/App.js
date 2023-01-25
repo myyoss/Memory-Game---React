@@ -82,7 +82,7 @@ function App() {
         setChoiceTwo(null);
         setTurns(0);
         setStopInter(false);
-      }, 1000);
+      }, 1500);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceOne, choiceTwo]);

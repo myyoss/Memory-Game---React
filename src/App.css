@@ -61,6 +61,7 @@ h1 {
 }
 
 .card {
+  display: block;
   position: relative;
   margin: auto;
   cursor: pointer;
@@ -183,6 +184,7 @@ h1 {
 }
 
 
+/* BACKGROUND ANIMATION: */
 .area {
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
